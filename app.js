@@ -36,10 +36,10 @@ app.post("/",function(req,res) {
     };
 
     const jsonData = JSON.stringify(data);
-    const url = "https://us9.api.mailchimp.com/3.0/lists/49a934afc0"
+    const url = "https://<servercode>.api.mailchimp.com/3.0/lists/audicence_id"
     const options={
         method:"POST",
-        auth:"Rupesh07:6b4f1c4d1f6d3ecc1b0131541e8ea567-us9"
+        auth:"Rupesh07:Mailchimp_api_key"
     }
     const request = https.request(url,options,function(response){
        if (response.statusCode === 200){
@@ -58,6 +58,3 @@ app.post("/",function(req,res) {
 app.post("/failure",function(req,res){
     res.redirect("/");
 })
-
-// Mailchimp API key - 6b4f1c4d1f6d3ecc1b0131541e8ea567-us9
-// audience id -  49a934afc0
